@@ -24,7 +24,7 @@ if(!guess){
     document.querySelector('.message').textContent='😔   Please enter the number ';
 }else if(guess===secret){
 
-document.querySelector('.message').textContent='🥳   Right answer';
+document.querySelector('.message').textContent="🥳   Right answer.Please press 'Again' button  to start again.The HighScore will remain the same ";
 document.querySelector('.number').textContent=secret;
 
 document.querySelector('.highscore').textContent=highscore+1;
@@ -35,6 +35,11 @@ document.querySelector('.score').textContent= score1;
 
 let disable=document.querySelector('.check').disabled = true;
 
+let tp=document.querySelector('.check');
+
+// if(disable == true){
+//     document.querySelector('.message').textContent='😔   Please enter the number    ';
+// }
 
 
 }else if(guess > 20) {
@@ -72,9 +77,6 @@ if(score1 <= 0){
 
 } );
 
-// document.querySelector('.btn again').addEventListener('click',function() {
-//     let guess_again=(Number( document.querySelector('.guess').textContent = ' '));
-// });
 
 document.querySelector('.again').addEventListener('click' ,function again(){
     
