@@ -128,8 +128,38 @@ footer{
   font-size: 1.5rem;
 }
 
+.Hint{
+  border: none;
+  background-color: #eee;
+  color: #222;
+  font-size: 2rem;
+  font-family: inherit;
+  padding: 2rem 3rem;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.Hint:hover {
+  background-color: #ccc;
+
+}
+
+.answer{
+  margin-top: 20px;
+}
+
+
 @media (min-width : 250px ) and (max-width : 600px)    {
 
+  footer{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 300px;
+    background-color: #6460B2;
+    color: white;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  
 
   main{
     display: flex;
@@ -137,11 +167,16 @@ footer{
 
   }
 
+  .number{
+    margin-top: 20px;
+  }
 
 
   .left{
     width: 20rem;
-    margin-top: 10rem;
+
+    display: flex;
+    flex-direction: column;
   }
 
   .right{
@@ -160,7 +195,7 @@ footer{
     text-align: center;
     display: block;
     margin-bottom: 3rem;
-    margin-top: 50px;
+    margin-top: 350px;
   }
 
   .btn{

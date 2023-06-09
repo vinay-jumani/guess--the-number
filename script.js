@@ -15,7 +15,7 @@ let score1=20;
 let highscore =+0;
 // console.log(secret);
 
-document.querySelector('.check').addEventListener('click',function guessfun() {
+let guessfunction= document.querySelector('.check').addEventListener('click',function guessfun() {
     let guess=(Number( document.querySelector('.guess').value));
 
 
@@ -78,7 +78,32 @@ if(score1 <= 0){
 } );
 
 
-document.querySelector('.again').addEventListener('click' ,function again(){
+
+let hintfunction=document.querySelector('.Hint').addEventListener('click',function Hintfun(){
+    
+    score1=score1-5;
+    document.querySelector('.score').textContent = score1;
+    
+
+    if(secret <= 5){
+        document.querySelector('.answer').textContent='The number is between 1 to 5';
+    }else if(secret <= 6 || secret<= 10 ){
+        document.querySelector('.answer').textContent='The number is between 5 to 10';
+    }else if(secret <10 || secret <=15 ){
+        document.querySelector('.answer').textContent='The number is between 11 to 15 ';
+    }else if(secret <15 || secret <=20 ){
+        document.querySelector('.answer').textContent='The number is between 16 to 20 ';
+    }
+
+    let hintdis=document.querySelector('.Hint').disabled = true;
+
+    
+
+
+
+});
+
+let againfunction=document.querySelector('.again').addEventListener('click' ,function againfun(){
     
     score1=20;
     secret= Math.trunc(Math.random()*20)+1;
@@ -91,6 +116,7 @@ document.querySelector('.again').addEventListener('click' ,function again(){
     let disable=document.querySelector('.check').disabled = false;
     highscore++;
 
+    document.querySelector('.answer').textContent="Click the 'Hint' button to get the hint.5 point will cutted.";
 
 
     if(highscore ==20){
@@ -99,4 +125,11 @@ document.querySelector('.again').addEventListener('click' ,function again(){
          disable=document.querySelector('.again').disabled = true;
    }
     // guessfun();
+
+    
+        let hintdis=document.querySelector('.Hint').disabled = false;
+    
+
 });
+
+
